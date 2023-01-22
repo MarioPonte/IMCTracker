@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     formLabel: {
       fontSize: 18,
       paddingLeft: 20,
+      fontFamily: 'Inter_400Regular',
     },
 
     formInput: {
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
       backgroundColor: "#F7FFF9",
       margin: 12,
       paddingLeft: 10,
+      fontFamily: 'Inter_400Regular',
     },
 
     buttonCalculator: {
@@ -48,6 +50,7 @@ const styles = StyleSheet.create({
     textButtonCalculator: {
       fontSize: 20,
       color: "white",
+      fontFamily: 'Inter_400Regular',
     },
 });
 
