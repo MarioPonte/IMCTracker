@@ -52,6 +52,13 @@ const styles = StyleSheet.create({
       color: "white",
       fontFamily: 'Inter_400Regular',
     },
+
+    errorMessage: {
+      fontSize: 12,
+      color: "#dc3545",
+      fontFamily: 'Inter_900Black',
+      paddingLeft: 20,
+    },
 });
 
 export default styles;
