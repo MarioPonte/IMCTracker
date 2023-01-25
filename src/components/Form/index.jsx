@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Vibration } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Vibration, Pressable, Keyboard } from 'react-native';
 import ResultImc from "./ResultImc";
 import styles from "./style";
 
@@ -9,11 +9,22 @@ export default function Form(){
     const [weight, setWeight] = useState(null)
     const [messageImc, setMessageImc] = useState("Preencha o peso e a altura")
     const [imc, setImc] = useState(null)
+    const [imcCondition, setImcCondition] = useState(null)
     const [textButton, setTextButton] = useState("Calcular")
     const [errorMessage, setErrorMessage] = useState(null)
 
     function imcCalculator(){
-        return setImc((weight/(height*height)).toFixed(2))
+        let heightFormat = height.replace(",",".")
+        let weightFormat = weight.replace(",",".")
+
+        if(((weightFormat/(heightFormat*heightFormat)).toFixed(2))<18.5) setImcCondition("Está abaixo do peso"); 
+        else if(((weightFormat/(heightFormat*heightFormat)).toFixed(2))<25) setImcCondition("Está com peso normal");
+        else if(((weightFormat/(heightFormat*heightFormat)).toFixed(2))<30) setImcCondition("Está com sobrepeso");
+        else if(((weightFormat/(heightFormat*heightFormat)).toFixed(2))<35) setImcCondition("Está com obesidade");
+        else if(((weightFormat/(heightFormat*heightFormat)).toFixed(2))<40) setImcCondition("Está com obesidade severa");
+        else if(((weightFormat/(heightFormat*heightFormat)).toFixed(2))>=40) setImcCondition("Está com obesidade morbida");
+
+        return setImc((weightFormat/(heightFormat*heightFormat)).toFixed(2))
     }
 
     function verificationImc(){
@@ -35,12 +46,13 @@ export default function Form(){
         }
         verificationImc()
         setImc(null)
+        setImcCondition(null)
         setTextButton("Calcular")
         setMessageImc("Preencha o peso e a altura")
     }
 
     return (
-        <View style={styles.formContext}>
+        <Pressable style={styles.formContext} onPress={Keyboard.dismiss}>
             <View style={styles.form}>
                 <Text style={styles.formLabel}>Altura</Text>
                 <Text style={styles.errorMessage}>{errorMessage}</Text>
@@ -54,7 +66,7 @@ export default function Form(){
                 </TouchableOpacity>
                 {/*<Button onPress={() => validationImc()} title={textButton} />*/}
             </View>
-            <ResultImc messageResultImc={messageImc} resultImc={imc} />
-        </View>
+            <ResultImc messageResultImc={messageImc} resultImc={imc} imcCondition={imcCondition} />
+        </Pressable>
     )
 }

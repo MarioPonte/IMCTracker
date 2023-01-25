@@ -23,6 +23,7 @@ export default function ResultImc(props){
             </View>
             <Text style={styles.information}>{props.messageResultImc}</Text>
             <Text style={styles.numberImc}>{props.resultImc}</Text>
+            <Text style={styles.information}>{props.imcCondition}</Text>
         </View>
     )
 }
