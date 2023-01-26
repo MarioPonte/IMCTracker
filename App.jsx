@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Main from './src/components/Main';
 import Title from './src/components/Title';
-import { useFonts, Inter_900Black, Inter_400Regular  } from '@expo-google-fonts/inter';
+import { useFonts, Inter_900Black, Inter_400Regular, Inter_500Medium  } from '@expo-google-fonts/inter';
 
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     Inter_900Black,
     Inter_400Regular,
+    Inter_500Medium,
   });
 
   if (!fontsLoaded) return null;

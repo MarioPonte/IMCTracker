@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     textButtonCalculator: {
       fontSize: 20,
       color: "white",
-      fontFamily: 'Inter_400Regular',
+      fontFamily: 'Inter_500Medium',
     },
 
     errorMessage: {
@@ -56,6 +56,11 @@ const styles = StyleSheet.create({
       color: "#dc3545",
       fontFamily: 'Inter_900Black',
       paddingLeft: 20,
+    },
+
+    exhibitionResultImc: {
+      width: "100%",
+      height: "50%",
     },
 });
 
