@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
       marginTop: 20,
     },
 
+    container:{
+      flex: 1,
+    },
+
     resultImcItem: {
       fontSize: 26,
       fontFamily: "Inter_500Medium",

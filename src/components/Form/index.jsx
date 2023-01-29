@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Vibration, Pressable, Keyboard, FlatList } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Vibration, Pressable, Keyboard, FlatList, ScrollView, SafeAreaView } from 'react-native';
 import ResultImc from "./ResultImc";
 import styles from "./style";
 
@@ -80,16 +80,20 @@ export default function Form(){
                     </TouchableOpacity>
                 </View>
             }
-            <FlatList style={styles.listImcs} data={imcList.reverse()} renderItem={({item}) => {
-                return (
-                    <Text style={styles.resultImcItem}>
-                        <Text style={styles.textResultItemList}>Resultado IMC = </Text>
-                        {item.imc}
-                    </Text>
-                )
-            }}
-            keyExtractor={item => item.id}
-            />
+
+            <SafeAreaView style={styles.container}>
+                <FlatList style={styles.listImcs} data={imcList.reverse()} renderItem={({item}) => {
+                    return (
+                            <Text style={styles.resultImcItem}>
+                                <Text style={styles.textResultItemList}>Resultado IMC = </Text>
+                                {item.imc}
+                            </Text>
+                    )
+                }}
+                keyExtractor={item => item.id}
+                />
+            </SafeAreaView>
+            
         </View>
     )
 }
