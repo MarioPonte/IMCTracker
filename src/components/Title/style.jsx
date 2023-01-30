@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     },
     textTitle: {
         fontSize: 40,
-        color: "#2FCB8F",
+        color: "white",
         fontFamily: 'Inter_900Black',
     },
 });

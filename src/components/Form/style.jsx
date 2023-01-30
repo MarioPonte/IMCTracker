@@ -69,13 +69,13 @@ const styles = StyleSheet.create({
 
     container:{
       flex: 1,
+      marginBottom: 20,
     },
 
     resultImcItem: {
       fontSize: 26,
       fontFamily: "Inter_500Medium",
       color: "red",
-      height: 50,
       width: "100%",
       paddingRight: 20,
     },
