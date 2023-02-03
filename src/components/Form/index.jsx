@@ -82,7 +82,7 @@ export default function Form(){
             }
 
             <SafeAreaView style={styles.container}>
-                <FlatList style={styles.listImcs} data={imcList.reverse()} renderItem={({item}) => {
+                <FlatList style={styles.listImcs} showsVerticalScrollIndicator={false} data={imcList.reverse()} renderItem={({item}) => {
                     return (
                             <Text style={styles.resultImcItem}>
                                 <Text style={styles.textResultItemList}>Resultado IMC = </Text>

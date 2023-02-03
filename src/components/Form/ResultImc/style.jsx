@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
       fontSize: 18,
       color: "#2FCB8F",
       fontFamily: 'Inter_900Black',
+      marginBottom: 10,
     },
 
     numberImc: {

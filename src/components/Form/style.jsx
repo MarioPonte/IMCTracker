@@ -65,6 +65,8 @@ const styles = StyleSheet.create({
 
     listImcs: {
       marginTop: 20,
+      height: 200,
+      flexGrow: 0,
     },
 
     container:{
@@ -74,14 +76,15 @@ const styles = StyleSheet.create({
 
     resultImcItem: {
       fontSize: 26,
-      fontFamily: "Inter_500Medium",
-      color: "red",
+      fontFamily: "Inter_900Black",
+      color: "#2FCB8F",
       width: "100%",
       paddingRight: 20,
     },
 
     textResultItemList: {
       fontSize: 16,
+      fontFamily: "Inter_500Medium",
     },
 });
 
