@@ -15,4 +15,4 @@
 
 ## 📜 License
 
-IMCTracker is under the MIT License. See the file [LICENSE](https://github.com/MarioPonte/aluraTube/blob/main/LICENSE) for more details.
+IMCTracker is under the MIT License. See the file [LICENSE](https://github.com/MarioPonte/IMCTracker/blob/main/LICENSE) for more details.
